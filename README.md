@@ -67,14 +67,14 @@ AI-Based Cost Estimation
 
 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/Anti-Corrupt-Infra.git
+git clone https://github.com/saquib7/Anti-Corrupt-Infra.git
 cd Anti-Corrupt-Infra
 
 2️⃣ Backend Setup
 
 cd backend
 npm install
-npm start
+npm run dev
 
 3️⃣ Frontend Setup
 
