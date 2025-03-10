@@ -25,7 +25,7 @@ const LandingPage = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl sm:text-6xl font-bold text-white mb-6"
           >
-            🚀 Transforming Infrastructure with
+            Transforming Infrastructure with
             <span className="text-secondary"> AI</span> &{' '}
             <span className="text-accent">Blockchain</span> Transparency!
           </motion.h1>
