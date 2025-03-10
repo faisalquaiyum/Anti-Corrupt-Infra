@@ -29,9 +29,29 @@ router.post("/login", async (req, res) => {
     return res.status(401).json({ error: "Invalid credentials" });
   }
 
+  // Generate JWT Token
   const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: "1h" });
 
   res.json({ token, role: user.role });
+});
+
+// Get Logged-In User Data (For Dashboard Redirection)
+router.get("/me", async (req, res) => {
+  try {
+    // Extract token from Authorization header
+    const token = req.header("Authorization")?.replace("Bearer ", "");
+    if (!token) return res.status(401).json({ error: "Unauthorized: No token provided" });
+
+    // Verify token
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const user = await User.findById(decoded.id).select("-password"); // Exclude password
+
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    res.json({ email: user.email, role: user.role });
+  } catch (error) {
+    res.status(401).json({ error: "Unauthorized: Invalid token" });
+  }
 });
 
 module.exports = router;
