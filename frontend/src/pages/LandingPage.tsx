@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { AlertTriangle, FileCheck, Users } from 'lucide-react';
+import FAQ from '../components/FAQ';
 
 const LandingPage = () => {
   return (
@@ -131,6 +132,9 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQs Section */}
+      <FAQ />
     </div>
   );
 };
