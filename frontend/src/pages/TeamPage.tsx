@@ -78,7 +78,7 @@ const TeamPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50 py-8 sm:py-8 px-4 sm:px-6 lg:px-8 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center sm:text-left mb-0 sm:mb-12">
-          <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">Meet Our Team</h1>
+          <h1 className="-mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-primary opacity-90 dark:text-white">Meet Our Team</h1>
           <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-gray-500 max-w-3xl">
             Meet the experts driving our AI-powered solutions.
           </p>
@@ -101,7 +101,7 @@ const TeamPage: React.FC = () => {
                       />
                     </div>
                     <h3 className="mt-6 text-xl sm:text-2xl font-semibold text-gray-900">{member.name}</h3>
-                    <p className="text-base sm:text-lg text-blue-600 mb-2 sm:mb-3">{member.role}</p>
+                    <p className="text-base sm:text-lg text-primary mb-2 sm:mb-3">{member.role}</p>
                     <p className="text-sm sm:text-base text-gray-600 text-center max-w-sm sm:max-w-md mb-4 sm:mb-6">
                       {member.description}
                     </p>
@@ -145,7 +145,7 @@ const TeamPage: React.FC = () => {
               <button
                 key={index}
                 className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors duration-200 ${
-                  index === currentIndex ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
+                  index === currentIndex ? 'bg-primary' : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
