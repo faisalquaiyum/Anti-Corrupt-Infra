@@ -139,7 +139,7 @@ import {
   Eye
 } from "lucide-react";
 import { Project } from "../types";
-import AIInsights from "./aiInsights";
+import AIInsights from "./AIInsights";
 // import type { AIInsights, Project } from "../types";
 // import AIInsights from "./aiInsights";
 // import AIInsights from "./aiInsights";
