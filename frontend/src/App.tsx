@@ -10,6 +10,8 @@ import ReportIssue from './pages/ReportIssue';
 import ProjectList from './pages/ProjectList';
 import WorkerMarketplace from './pages/WorkerMarketplace';
 import Footer from './components/Footer';
+import GovernmentPortal from './pages/GovernmentDashboard';
+import WardDashboard from './pages/WardDashboard';
 
 function App() {
   return (
@@ -21,10 +23,12 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/dashboard" element={<CitizenDashboard />} />
+            <Route path="/citizendashboard" element={<CitizenDashboard />} />
             <Route path="/report-issue" element={<ReportIssue />} />
             <Route path="/projects" element={<ProjectList />} />
             <Route path="/marketplace" element={<WorkerMarketplace />} />
+            <Route path="/governmentdashboard" element={<GovernmentPortal />} />
+            <Route path="/warddashboard" element={<WardDashboard />} />
           </Routes>
         </AnimatePresence>
         <Footer />
